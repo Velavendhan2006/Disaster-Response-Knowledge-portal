@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Disaster Response Knowledge Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            🚨 Disaster Response Knowledge Portal
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#disasters">Disasters</a>
+            <a href="#safety">Safety</a>
+            <a href="#resources">Resources</a>
+            <a href="#contacts">Contacts</a>
+            <a href="#report">Report</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Disaster Response Knowledge Portal</h1>
+
+            <p>
+                A centralized platform for disaster information,
+                emergency contacts, safety guidelines and relief resources.
+            </p>
+
+            <a href="#disasters" class="button">
+                Explore Disaster Information
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- DISASTERS -->
+    <section id="disasters">
+
+        <h2>Disaster Information</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌊 Flood</h3>
+
+                <p>
+                    Information about flood preparedness,
+                    evacuation and emergency response.
+                </p>
+
+                <button onclick="showInfo('flood')">
+                    View Guidelines
+                </button>
+            </div>
+
+
+            <div class="card">
+                <h3>🌍 Earthquake</h3>
+
+                <p>
+                    Safety procedures before, during and
+                    after an earthquake.
+                </p>
+
+                <button onclick="showInfo('earthquake')">
+                    View Guidelines
+                </button>
+            </div>
+
+
+            <div class="card">
+                <h3>🌀 Cyclone</h3>
+
+                <p>
+                    Cyclone warnings, evacuation and
+                    emergency preparedness.
+                </p>
+
+                <button onclick="showInfo('cyclone')">
+                    View Guidelines
+                </button>
+            </div>
+
+
+            <div class="card">
+                <h3>🔥 Fire</h3>
+
+                <p>
+                    Fire prevention, evacuation and
+                    emergency response information.
+                </p>
+
+                <button onclick="showInfo('fire')">
+                    View Guidelines
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SAFETY -->
+    <section id="safety">
+
+        <h2>Safety Guidelines</h2>
+
+        <div class="safety-list">
+
+            <div>
+                <h3>Before Disaster</h3>
+
+                <ul>
+                    <li>Prepare an emergency kit.</li>
+                    <li>Keep important documents safe.</li>
+                    <li>Know evacuation routes.</li>
+                    <li>Save emergency contacts.</li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h3>During Disaster</h3>
+
+                <ul>
+                    <li>Stay calm.</li>
+                    <li>Follow official instructions.</li>
+                    <li>Move to a safe location.</li>
+                    <li>Avoid damaged buildings.</li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h3>After Disaster</h3>
+
+                <ul>
+                    <li>Check for injuries.</li>
+                    <li>Contact emergency services.</li>
+                    <li>Avoid unsafe areas.</li>
+                    <li>Follow recovery instructions.</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESOURCES -->
+    <section id="resources">
+
+        <h2>Relief Resources</h2>
+
+        <div class="resource-table">
+
+            <table>
+
+                <tr>
+                    <th>Resource</th>
+                    <th>Purpose</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>Emergency Shelter</td>
+                    <td>Temporary accommodation</td>
+                    <td>Available</td>
+                </tr>
+
+                <tr>
+                    <td>Medical Assistance</td>
+                    <td>First aid and medical support</td>
+                    <td>Available</td>
+                </tr>
+
+                <tr>
+                    <td>Food Distribution</td>
+                    <td>Emergency food supplies</td>
+                    <td>Available</td>
+                </tr>
+
+                <tr>
+                    <td>Rescue Team</td>
+                    <td>Emergency rescue operations</td>
+                    <td>Active</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- EMERGENCY CONTACTS -->
+    <section id="contacts">
+
+        <h2>Emergency Contacts</h2>
+
+        <div class="contact-container">
+
+            <div class="contact">
+                <h3>🚨 Emergency</h3>
+                <p>112</p>
+            </div>
+
+            <div class="contact">
+                <h3>🚑 Ambulance</h3>
+                <p>108</p>
+            </div>
+
+            <div class="contact">
+                <h3>🔥 Fire & Rescue</h3>
+                <p>101</p>
+            </div>
+
+            <div class="contact">
+                <h3>👮 Police</h3>
+                <p>100</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REPORT -->
+    <section id="report">
+
+        <h2>Report a Disaster</h2>
+
+        <div class="report-box">
+
+            <form onsubmit="submitReport(event)">
+
+                <label>Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>Location</label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Enter disaster location"
+                    required
+                >
+
+
+                <label>Disaster Type</label>
+
+                <select id="disasterType">
+
+                    <option>Flood</option>
+                    <option>Earthquake</option>
+                    <option>Cyclone</option>
+                    <option>Fire</option>
+                    <option>Other</option>
+
+                </select>
+
+
+                <label>Description</label>
+
+                <textarea
+                    id="description"
+                    rows="5"
+                    placeholder="Describe the situation"
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Submit Report
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Disaster Response Knowledge Portal
+        </p>
+
+        <p>
+            Mini Project | Disaster Management and Emergency Response
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
